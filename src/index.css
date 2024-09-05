@@ -1,13 +1,142 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: black;
+  
+}
+
+.heading{
+  text-align: center;
+  background-color: seashell;
+  color: black;
+ padding: 10px;
+ font-size: 30px;
+  
+ }
+
+ .cards{
+  display: inline-block;
+  margin-top: 50px;
+  padding: 20px;
+  gap: 30px;
+  margin-left: 30px;
+  
+
+  
+  
+ }
+
+
+.card{
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: rgb(250, 240, 240);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  
+  
+}
+
+.card:hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.card_name{
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+button{
+  border: none;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+
+ .card_img{
+  width: 50vh;
+  height: 50vh;
+  border-radius: 10px;
+ }
+
+ button:hover{
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+ }
+
+ .footer{
+  background-color: seashell;
+  color: black;
+  text-align: center;
+  height: 30px;
+  padding: 10px;
+  font-size: 20px;
+ }
+
+ /* Media Queries */
+
+/* For screens smaller than 1024px (Tablets) */
+@media (max-width: 1024px) {
+  .cards {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .card_img {
+    width: 40vh;
+    height: 40vh;
+  }
+}
+
+/* For screens smaller than 768px (Mobile) */
+@media (max-width: 768px) {
+  .cards {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .card_img {
+    width: 35vh;
+    height: 35vh;
+  }
+
+  .card_name {
+    font-size: 20px;
+  }
+}
+
+/* For screens smaller than 480px (Small Mobile) */
+@media (max-width: 480px) {
+  .cards {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .card_img {
+    width: 15vh;
+    height: 20vh;
+  }
+
+  .card_name {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 8px;
+  }
 }
